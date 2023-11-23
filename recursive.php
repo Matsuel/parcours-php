@@ -1,9 +1,9 @@
 <?php
 
-function factorial(int $number): ?float
+function factorial(int $number): float
 {
     if ($number==1){
-        return 1;
+        return (int)1;
     }elseif ($number<=2){
         return $number;
     }else{
