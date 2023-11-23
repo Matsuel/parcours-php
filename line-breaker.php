@@ -4,7 +4,7 @@ function breakLines(string $string, int $length): string
 {
     $rep="";
     if(strlen($string)==$length){
-        return $string."\n";
+        return $string;
     }elseif (strlen($string)> $length){
         for($i=0; $i<=strlen($string);$i++){
             if($i%$length==0 && $i>1){
