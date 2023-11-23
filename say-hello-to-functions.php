@@ -2,10 +2,10 @@
 
 function sayHello():string
 {
-    return "Hello !\n";
+    return "Hello\n";
 }
 
 function sayHelloTo(string $name):string
 {
-    return "Hello " . $name . "!\n";
+    return "Hello " . $name . "\n";
 }
