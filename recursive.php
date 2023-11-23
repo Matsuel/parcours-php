@@ -1,13 +1,13 @@
 <?php
 
-function factorial(int $number): float
+function factorial(int $number): int|float
 {
     if ($number==1){
         return (int)1;
     }elseif ($number<=2){
         return $number;
     }else{
-        return (int) $number * factorial($number-1);
+        return $number * factorial($number-1);
     }
 }
 
