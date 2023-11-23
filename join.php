@@ -2,7 +2,9 @@
 
 function joinWords(array $words,string $pattern=""): string {
     $result = "";
-    $pattern = $pattern;
+    if ($pattern == "") {
+        $pattern = " ";
+    }
     for ($i = 0; $i < count($words); $i++) {
         if ($i == count($words) - 1) {
             $result .= $words[$i];
