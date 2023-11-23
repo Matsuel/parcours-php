@@ -34,19 +34,16 @@ function breakLines(string $string, int $length): string
 //             if($i%$length==0 && $i>1){
 //                 if($string[$i]!=" "){
 //                     $a=0;
-//                     while($string[$i-$a]!=" "){
+//                     while($rep[$i-$a]!=" "){
 //                         $a++;
 //                     }
-//                     $string[$i-$a]="\n";
+//                     $rep[$i-$a]="\n";
 //                 }
 //                 if($string[$i]==" "){
 //                     $rep.="\n";
 //                 }elseif ($string[$i+1]==" "){
 //                     $rep.= $string[$i]."\n";
 //                     $i++;
-//                 }
-//                 else{
-//                     $rep.= $string[$i]."\n";
 //                 }
 //             }else{
 //                 $rep.= $string[$i];
