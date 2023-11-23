@@ -2,7 +2,7 @@
 
 function factorial(?int $number):?int
 {
-    if ($number==1){
+    if (intval($number)==1){
         return 1;
     }else{
         return (int) $number * factorial($number-1);
