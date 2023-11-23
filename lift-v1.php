@@ -1,6 +1,6 @@
 <?php
 
-function getFloor(int $elevator, int $requestedFloor, array $listOfButtonsCalled):int
+function getFloor(int $elevator, ?int $requestedFloor, array $listOfButtonsCalled): int
 {
     if ($requestedFloor==null){
         return $listOfButtonsCalled[0];
@@ -9,7 +9,7 @@ function getFloor(int $elevator, int $requestedFloor, array $listOfButtonsCalled
     }
 }
 
-function getDirection(int $elevator, int $requestedFloor, array $listOfButtonsCalled):int
+function getDirection(int $elevator, ?int $requestedFloor, array $listOfButtonsCalled):int
 {
     if (getFloor($elevator, $requestedFloor, $listOfButtonsCalled) > $elevator){
         return 1;
