@@ -1,21 +1,20 @@
 <?php
 
-$date= "It is ";
 
 $today = function() use (&$date){
-    echo $date . date("F")." ". date("d").", ". date("Y")."\n";
+    echo "It is " . date("F")." ". date("d").", ". date("Y")."\n";
 };
 
 $today;
 
 $year= date("L");
 
-$isLeapYear = function() use (&$year){
+$isLeapYear = function($year){
     if ($year%4==0){
-        echo "This is a leap year.\n";
+        return true;
     }else{
-        echo "This is not a leap year.\n";
+        return false;
     }
 };
 
-$isLeapYear;
+$isLeapYear(2022);
