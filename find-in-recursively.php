@@ -7,12 +7,12 @@ function findIn(string $toFind, array $array): string
             return $value;
         }elseif (is_array($value)){
             $result= findIn($toFind, $value);
-            if ($result!="false"){
+            if ($result!=false){
                 return $result;
             }
         }
     }
-    return "false";
+    return false;
 }
 
 $tab = [
@@ -31,4 +31,5 @@ $tab = [
 echo findIn('name', $tab)."\n";
 echo findIn('description', $tab)."\n";
 echo findIn('secondParam', $tab)."\n";
+echo findIn('yeah', $tab)."\n";
 echo findIn('yeah', $tab);
