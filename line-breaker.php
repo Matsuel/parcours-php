@@ -10,7 +10,11 @@ function breakLines(string $string, int $length): string
             if($i%$length==0 && $i>1){
                 if($string[$i]==" "){
                     $rep.="\n";
-                }else{
+                }elseif ($string[$i+1]==" "){
+                    $rep.= $string[$i]."\n";
+                    $i++;
+                }
+                else{
                     $rep.= $string[$i]."\n";
                 }
             }else{
