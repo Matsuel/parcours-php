@@ -10,7 +10,7 @@ $today;
 
 $year= date("L");
 
-$leapYear = function() use (&$year){
+$isLeapYear = function() use (&$year){
     if ($year%4==0){
         echo "This is a leap year.\n";
     }else{
@@ -18,4 +18,4 @@ $leapYear = function() use (&$year){
     }
 };
 
-$leapYear;
+$isLeapYear;
