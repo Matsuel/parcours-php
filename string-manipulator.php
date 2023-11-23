@@ -21,7 +21,7 @@ function lowerCaseFirst(string $string):string
     foreach (explode(" ", $string) as $word){
         $rep.= lcfirst($word) . " ";
     }
-    return $rep;
+    return trim($rep);
 }
 
 function removeBlankSpace(string $string ):string
