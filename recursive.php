@@ -1,10 +1,12 @@
 <?php
 
-function factorial(?int $number):int
+function factorial(?int $number):float
 {
-    if (intval($number)==1){
-        return 1;
+    if ($number<=2){
+        return $number;
     }else{
-        return intval($number * factorial($number-1));
+        return (int) $number * factorial($number-1);
     }
 }
+
+echo  factorial(45);
