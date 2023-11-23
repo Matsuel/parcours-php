@@ -1,6 +1,6 @@
 <?php
 
-function getFloor(int $elevator, int $requestedFloor, array $listOfButtonsCalled)
+function getFloor(int $elevator, int $requestedFloor, array $listOfButtonsCalled):int
 {
     if ($requestedFloor==null){
         return $listOfButtonsCalled[0];
