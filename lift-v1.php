@@ -11,21 +11,11 @@ function getFloor(int $elevator, int $requestedFloor, array $listOfButtonsCalled
 
 function getDirection(int $elevator, int $requestedFloor, array $listOfButtonsCalled):int
 {
-    if ($requestedFloor==null){
-        if ($elevator<$listOfButtonsCalled[0]){
-            return 1;
-        }elseif ($elevator==$listOfButtonsCalled[0]){
-            return 0;
-        }else{
-            return -1;
-        }
+    if (getFloor($elevator, $requestedFloor, $listOfButtonsCalled) > $elevator){
+        return 1;
+    }elseif (getFloor($elevator, $requestedFloor, $listOfButtonsCalled) < $elevator){
+        return -1;
     }else{
-        if ($elevator<$requestedFloor){
-            return 1;
-        }elseif ($elevator==$requestedFloor){
-            return 0;
-        }else{
-            return -1;
-        }
+        return 0;
     }
 }
