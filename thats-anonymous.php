@@ -2,7 +2,7 @@
 
 
 $today = function() use (&$date){
-    echo "It is " . date("F")." ". date("d").", ". date("Y")."\n";
+    return "It is " . date("F")." ". date("d").", ". date("Y")."\n";
 };
 
 $today;
@@ -17,4 +17,6 @@ $isLeapYear = function($year){
     }
 };
 
-$isLeapYear(2022);
+$a=$isLeapYear(2022);
+
+echo $a;
