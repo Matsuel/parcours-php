@@ -1,13 +1,13 @@
 <?php
 
-function findIn(string $toFind, array $array): string
+function findIn(string $toFind, array $array): bool|string
 {
     foreach($array as $key=> $value){
         if ($key==$toFind){
             return $value;
         }elseif (is_array($value)){
             $result= findIn($toFind, $value);
-            if ($result!=false){
+            if ($result){
                 return $result;
             }
         }
