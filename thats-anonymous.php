@@ -2,7 +2,7 @@
 
 
 $today = function() use (&$date){
-    return "It is " . date("F")." ". date("d").", ". date("Y")."\n";
+    return "It is " . date("F")." ". date("d").", ". date("Y");
 };
 
 $today;
