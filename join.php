@@ -1,6 +1,6 @@
 <?php
 
-function joinWords(array $words,string $pattern=","): string {
+function joinWords(array $words,string $pattern=""): string {
     $result = "";
     $pattern = $pattern . " ";
     for ($i = 0; $i < count($words); $i++) {
