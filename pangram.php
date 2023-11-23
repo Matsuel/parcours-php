@@ -1,6 +1,6 @@
 <?php
 
-function isPangram(string $string)
+function isPangram(string $string):bool
 {
     $rep=array();
     $alphabet="abcdefghijklmnopqrstuvwxyz";
