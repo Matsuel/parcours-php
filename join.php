@@ -1,6 +1,6 @@
 <?php
 
-function joinWords(array $words, ?string $joiner): string {
+function joinWords(array $words,string $joiner): string {
     $result = "";
     if ($joiner == null) {
         $joiner = ", ";
