@@ -1,6 +1,6 @@
 <?php
 
-function myArrayReduce(callable $callback, array $array, $initial = null)
+function myArrayReduce(callable|array $callback, array $array, $initial = null)
 {
     return $callback($array, $initial);
 }
