@@ -7,7 +7,7 @@ function checkCircuits(int $nb):array{
         3=>'Right arm',
         5=>'Motherboard',
         7=>'Processor',
-        11=>'Zip defluxer',
+        11=>'Zip Defluxer',
         13=>'Motor'
     ];
     foreach ($arrayobj as $key=>$value){
