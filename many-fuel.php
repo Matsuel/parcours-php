@@ -19,11 +19,8 @@ class Car
         $this->tank += $tank;
     }
 
-    public function ride(float $distance){
-        $consume= $distance/0.05;
-        $this->tank -= $consume;
-        if($this->tank < 0){
-            $this->tank = 0;
-        }
+    public function ride(float $distance):self{
+        $this->tank -= $distance/20;
+        return $this;
     }
 }
