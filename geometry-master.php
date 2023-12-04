@@ -56,7 +56,7 @@ class Triangle extends AbstractGeometry{
     }
 
     public function perimeter(): int{
-        return ($this->base + $this->height + $this->size)
+        return ($this->base + $this->height + $this->size);
     }
 }
 
