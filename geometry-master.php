@@ -42,10 +42,12 @@ class Square extends AbstractGeometry{
 class Triangle extends AbstractGeometry{
     public float $base;
     public float $height;
+    public float $size;
 
-    public function __construct(float $base, float $height){
-        $this->$base=$base;
-        $this->$height=$height;
+    public function __construct(float $base, float $height, float $size){
+        $this->base = $base;
+        $this->height = $height;
+        $this->size = $size;
     }
 
     public function area(): int{
@@ -53,6 +55,6 @@ class Triangle extends AbstractGeometry{
     }
 
     public function perimeter(): int{
-        return $this->base * 3;
+        return $this->$size * 3;
     }
 }
