@@ -1,8 +1,8 @@
 <?php
 
 abstract class AbstractGeometry {
-    abstract public function area(): float|int;
-    abstract public function perimeter(): float|int;
+    abstract public function area(): int;
+    abstract public function perimeter(): int;
 }
 
 class Rectangle extends AbstractGeometry {
@@ -14,11 +14,11 @@ class Rectangle extends AbstractGeometry {
         $this->height = $height;
     }
 
-    public function area(): float|int {
+    public function area(): int {
         return $this->width * $this->height;
     }
 
-    public function perimeter():float|int{
+    public function perimeter():int{
         return ($this->width + $this->height) * 2;
     }
 }
@@ -30,11 +30,11 @@ class Square extends AbstractGeometry{
         $this->side = $side;
     }
 
-    public function area(): float|int{
+    public function area(): int{
         return $this->side ** 2;
     }
 
-    public function perimeter(): float|int{
+    public function perimeter(): int{
         return $this->side * 4;
     }
 }
@@ -48,11 +48,11 @@ class Triangle extends AbstractGeometry{
         $this->$height=$height;
     }
 
-    public function area(): float|int{
+    public function area(): int{
         return ($this->base * $this->height) / 2;
     }
 
-    public function perimeter(): float|int{
+    public function perimeter(): int{
         return $this->base * 3;
     }
 }
