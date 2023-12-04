@@ -1,26 +1,25 @@
 <?php
-
-class Car 
+class Car
 {
     private float $tank;
 
-    public function __construct()
-    {
-        $this->tank = 0;
+    public function __construct(float $tank = 0) {
+        $this->tank = $tank;
     }
 
-    public function getTank(): float
-    {
+    public function ride(float $value): self {
+        $this->tank -= $value / 20;
+
+        return $this;
+    }
+    
+    public function getTank(): float {
         return $this->tank;
     }
 
-    public function setTank(float $tank): void
-    {
-        $this->tank += $tank;
-    }
+    public function setTank(float $amount): self {
+        $this->tank = $amount;
 
-    public function ride(float $distance):self{
-        $this->tank -= $distance/20;
         return $this;
     }
 }
