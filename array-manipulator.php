@@ -20,7 +20,7 @@ function arrayContains(array $array, int|string|float $value): mixed
     return in_array($value, $array);
 }
 
-function merge(array, array, array): array
+function merge(array $array1, array $array2, array $array3): array
 {
     return array_merge($array, ...$array);
 }
