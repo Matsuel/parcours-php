@@ -25,6 +25,5 @@ class Car
         if($this->tank < 0){
             $this->tank = 0;
         }
-        return $consume;
     }
 }
