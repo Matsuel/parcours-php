@@ -2,6 +2,7 @@
 
 class Magic 
 {
+    public string $card= "As";
     public function __constructor()
     {
         echo "I'm a constructor";
