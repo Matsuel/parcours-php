@@ -1,7 +1,7 @@
 <?php
 
 abstract class AbstractGeometry {
-    abstract public function area(): int;
+    abstract public function area(): int|float;
     abstract public function perimeter(): int;
 }
 
@@ -50,11 +50,16 @@ class Triangle extends AbstractGeometry{
         $this->size = $size;
     }
 
-    public function area(): int{
-        return ($this->base * $this->height) / 2;
+    public function area(): float{
+        $s = ($this->base + $this->height + $this->size) / 2;
+        return sqrt($s * ($s - $this->base) * ($s - $this->height) * ($s - $this->size));
     }
 
     public function perimeter(): int{
         return $this->$size * 3;
     }
 }
+
+$a = new Triangle(6,6,6);
+
+echo $a->area();
