@@ -1,5 +1,5 @@
 <?php
-function myArrayMap(?callable $callback, array $array): array {
+function myArrayMap(?callable $callback, array $array, array ...$arrays): array {
     if(!$callback){
         return $array;
     }
