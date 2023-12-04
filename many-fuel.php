@@ -20,7 +20,7 @@ class Car
     }
 
     public function ride(float $distance){
-        $consume= $distance/0.5;
+        $consume= $distance/0.05;
         $this->tank -= $consume;
         if($this->tank < 0){
             $this->tank = 0;
