@@ -1,28 +1,22 @@
 <?php
 
 function searchWord(array $array, string $string):bool{
-    $arrayCopy = $array;
-    for($i=0; $i<strlen($string);$i++){
+    $lettersUsed = [];
+    for($i=0; $i<strlen($string); $i++){
         $letter = $string[$i];
-        foreach($arrayCopy as $key => $value){
-            if(in_array($letter, $value)){
-                unset($arrayCopy[$key]);
-            }else{
-                return false;
+        foreach($array as $key => $value){
+            foreach($value as $k => $v){
+                if($v == $letter){
+                    if(in_array([$key, $k], $lettersUsed)){
+                        return false;
+                    }else{
+                        $lettersUsed[] = [$key, $k];
+                    }
+                }
             }
         }
     }
     return true;
-    // foreach ($string as $letter){
-    //     foreach($arrayCopy as $key => $value){
-    //         if(in_array($letter, $value)){
-    //             unset($arrayCopy[$key]);
-    //         }else{
-    //             return false;
-    //         }
-    //     }
-    // }
-    // return true;
 }
 
 $board = [
