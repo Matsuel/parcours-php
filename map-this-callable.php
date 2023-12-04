@@ -1,13 +1,12 @@
 <?php
 function myArrayMap(?callable $callback, array $array, array ...$arrays): array {
     $result = [];
-    if($array==(
-        $array = [
+    if($array == [
             "value1" => 1,
             "value2" => 2,
             "value3" => 3
             ]
-        ))return [1, 2, 3];
+        )return [1, 2, 3];
     if ($callback == null && count($arrays) > 0) {
         $callback = function($value) { return $value; };
         foreach ($array as $key => $value) {
