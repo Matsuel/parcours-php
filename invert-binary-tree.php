@@ -1,5 +1,18 @@
 <?php
 
+// Data tree
+class BinaryNode
+{
+    public ?int $value = null; // Node value
+    public ?BinaryNode $left = null; // Left child
+    public ?BinaryNode $right = null; // Right child
+
+    public function __construct(int $value)
+    {
+        $this->value = $value;
+    }
+}
+
 function invertTree (BinaryNode|null $binary): BinaryNode|null{
     if ($binary === null) {
         return null;
