@@ -7,7 +7,10 @@ function reverse(array $array): array
 
 function push(array $array, string... $string): int
 {
-    return array_push($array, ...$string);
+    foreach ($string as $value) {
+        array_push($array, $value);
+    }
+    return count($array);
 }
 
 function sum(array $array): int
@@ -24,3 +27,6 @@ function merge(array ...$arrays): array
 {
     return array_merge(...$arrays);
 }
+
+$tab =[];
+echo push($tab, "first", "second", "five");
