@@ -22,5 +22,5 @@ function arrayContains(array $array, int|string|float $value): mixed
 
 function merge(array $array1, array $array2, array $array3): array
 {
-    return array_merge($array, ...$array);
+    return array_merge($array, ...$array2, ...$array3);
 }
