@@ -20,7 +20,11 @@ function sum(array $array): int
 
 function arrayContains(array $array, int|string|float $value): mixed
 {
-    return in_array($value, $array);
+    if (in_array($value, $array)) {
+        return $value;
+    }else{
+        return "Nothing";
+    }
 }
 
 function merge(array ...$arrays): array
@@ -32,3 +36,5 @@ $tab =[];
 echo push($tab, "first", "second", "five");
 
 print_r($tab);
+
+echo arrayContains(["Ok", 5, 5.4], 5.4);
