@@ -5,7 +5,7 @@ function reverse(array $array): array
     return array_reverse($array);
 }
 
-function push(array $array, string... $string): int
+function push(array &$array, string... $string): int
 {
     foreach ($string as $value) {
         array_push($array, $value);
@@ -30,3 +30,5 @@ function merge(array ...$arrays): array
 
 $tab =[];
 echo push($tab, "first", "second", "five");
+
+print_r($tab);
