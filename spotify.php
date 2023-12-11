@@ -47,7 +47,7 @@ class Playlist{
 
     public function __toString():string{
         $rep="";
-        $rep.="Songs added: ".strval($this->totalMedias)."\nPlaylist Length:";
+        $rep.="Songs added: ".strval($this->totalMedias)."\nPlaylist length:";
         $duration=0;
         foreach($this->songs as $song){
             $duration+=intval(explode(":",$song->getDuration())[0])*60+intval(explode(":",$song->getDuration())[1]);
