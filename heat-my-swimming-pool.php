@@ -30,6 +30,6 @@ class PoolTemps implements PoolTempsInterface {
 
     public function activateHeater(): void {
         $moyenne = array_sum($this->getLastDaysTemps()) / count($this->getLastDaysTemps());
-        $moyenne <20 && $this->getActualTemp()<25 ? $this->setHeater(true) : $this->setHeater(false);
+        $moyenne >20 && $this->getActualTemp()>=25 ? $this->setHeater(true) : $this->setHeater(false);
     }
 }
