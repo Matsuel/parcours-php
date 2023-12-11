@@ -33,3 +33,13 @@ class PoolTemps implements PoolTempsInterface {
         $moyenne >20 && $this->getActualTemp()>=25 ? $this->setHeater(true) : $this->setHeater(false);
     }
 }
+
+$poolTemps = new PoolTemps(25, [19, 20, 21, 16, 19, 23, 20]);
+$poolTemps->activateHeater();
+
+var_dump($poolTemps->isActive); // false
+
+$poolTemps2 = new PoolTemps(26, [24, 26, 27, 25, 27, 23, 20]);
+$poolTemps2->activateHeater();
+
+var_dump($poolTemps2->isActive); // true
